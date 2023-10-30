@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array methods</title>
+  </head>
+  <body>
+    <script>
+      // length method example
+      let programmers = [
+        {
+          name: "Maryam khan",
+          experience: "1 months",
+          age: "18",
+          level: "med",
+        },
+
+        {
+          name: "Shafiq khan",
+          experience: "8years",
+          age: "29",
+          level: "med",
+        },
+
+        {
+          name: "Mazher khan",
+          experience: "4 years",
+          age: "19",
+          level: "med",
+        },
+
+        {
+          name: "Anesa khan",
+          experience: "4 years",
+          age: "18",
+          level: "med",
+        },
+      ];
+      let internees = [
+        {
+          name: "laiba khan",
+          experience: "1 year",
+          age: "18",
+          level: "med",
+        },
+
+        {
+          name: "Mustan khan",
+          experience: "0 years",
+          age: "18",
+          level: "med",
+        },
+
+        {
+          name: "tanver khan",
+          experience: "4 years",
+          age: "20",
+          level: "med",
+        },
+      ];
+
+      console.log("programmers Length....", programmers.length);
+      //to string method example
+      // const fruits = ["Banana", "orange", "Apple", "Mango"];
+      // console.log(fruits);
+
+      // // join method example
+      //     const fruits = ["Banana", "orange", "Apple", "Mango"];
+      //     console.log(fruits.join("*"));
+
+      // pop method example
+      const popExample = ["Banana", "orange", "Apple", "Mango"];
+      console.log("popExample...", popExample.pop());
+
+      // pop method example
+      const myFruits = ["Banana", "orange", "Apple", "Mango"];
+      console.log("shift...", myFruits.shift());
+      console.log(" first programmer in array...", programmers[0]);
+
+      // delete array method example
+      delete programmers[0];
+      console.log("programmers array after delete", programmers);
+      //concate() method example
+      const allTeamMembers = programmers.concat(internees);
+      console.log("all team members....", allTeamMembers);
+      //flat method example
+      const myTableData = [
+        [1, 2],
+        [3, 4],
+        [5, 6],
+        [
+          [7, 8],
+          [9, 10],
+          [11, 12],
+        ],
+      ];
+
+      const flattenResult = myTableData.flat();
+      console.log("Flatten result....", flattenResult);
+    </script>
+  </body>
+</html>

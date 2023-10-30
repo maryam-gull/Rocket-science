@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>combine array methods</title>
+  </head>
+  <body>
+    <script>
+      let teams = [
+        {
+          id: 1,
+          name: "Waqas",
+          points: 10,
+          isProgrammer: true,
+        },
+
+        {
+          id: 2,
+          name: "mazher",
+          points: 8,
+          isProgrammer: true,
+        },
+
+        {
+          id: 3,
+          name: "mustan",
+          points: 2,
+          isProgrammer: false,
+        },
+
+        {
+          id: 4,
+          name: "Marjan",
+          points: 6,
+          isProgrammer: false,
+        },
+      ];
+      // let allBestProgrammers = teams?.filter((item) => item.isProgrammer);
+      // console.log("Best Programmers...", allBestProgrammers);
+
+      // let bestScrope = allBestProgrammers?.map((item) => item.points);
+      // console.log("best Score...", bestScrope);
+
+      // let totalBestScrore = bestScrope?.reduce((acc, item) => acc + item);
+      // console.log("total Best Score...", totalBestScore);
+
+      let totalBestScore = teams
+        ?.filter((item) => item.isProgrammer)
+        .map((item) => item.points)
+        .reduce((acc, item) => acc + item, 0);
+
+      console.log("Total Best Score of the team...", totalBestScore);
+    </script>
+  </body>
+</html>
